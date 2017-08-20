@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles =
 {
-    'articleone' : {
+    'article-one' : {
         title:'Article One | shravan saini',
         heading : 'Article One',
         date : '05/08/1995',
@@ -86,7 +86,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleNames',function(req,res)    {
-  res.send(createTemplate(articles['articleNames']));
+    var articleNames=req.params.articleNames;
+  res.send(createTemplate(articles[articleNames]));
 });
 
 
