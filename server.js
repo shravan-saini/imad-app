@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles =
 {
-    'article-one' : {
+    articleone : {
         title:'Article One | shravan saini',
         heading : 'Article One',
         date : '05/08/1995',
