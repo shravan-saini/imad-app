@@ -86,9 +86,7 @@ app.get('/counter', function(req,res)   {
 });
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
+
 
 app.get('/:articleNames',function(req,res)    {
     var articleNames=req.params.articleNames;
