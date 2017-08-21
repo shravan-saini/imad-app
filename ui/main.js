@@ -5,13 +5,16 @@ button.onclick = function() {
     var request = new XMLHttpRequest();
     
     //Capture the response and store it in a variable
-    if(request.readyState === XMLHttpRequest.DONE)
-    {
-        if(request.status===200)
+    
+    request.onreadystatechange = function() {   
+        if(request.readyState === XMLHttpRequest.DONE)
         {
-            var counter = request.responseText;
-            var span = getElementById('count');
-            span.innerHTML = counter.toString();
+            if(request.status===200)
+            {
+                var counter = request.responseText;
+                var span = getElementById('count');
+                span.innerHTML = counter.toString();
+            }
         }
     }
     
