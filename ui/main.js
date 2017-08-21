@@ -1,7 +1,7 @@
 var button = document.getElementById('counter');
 
 button.onclick = function() {
-    // Make an request object
+    // Create an request object
     var request = new XMLHttpRequest();
     
     //Capture the response and store it in a variable
@@ -17,6 +17,10 @@ button.onclick = function() {
             }
         }
     }
+    
+    //Make an request
+    request.open('GET','http://shravansaini94.imad.hasura-app.io/counter',true);
+    request.send(null);
     
 }
 
