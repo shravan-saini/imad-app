@@ -16,13 +16,13 @@ button.onclick = function() {
                 span.innerHTML = counter.toString();
             }
         }
-    }
+    };
     
     //Make an request
     request.open('GET','http://shravansaini94.imad.hasura-app.io/counter',true);
     request.send(null);
     
-}
+};
 
 
 
