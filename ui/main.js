@@ -25,18 +25,5 @@ button.onclick = function() {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 console.log('Loaded!');
 
