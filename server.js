@@ -59,7 +59,7 @@ var pool = new Pool(config);
 
 app.get('/:articleName',function(res,req){
   
-   pool.query("SELECT * FROM articles WHERE title='article-one'",function(err,result){
+   pool.query("SELECT * FROM articles WHERE title=articleOne",function(err,result){
        if(err)
        {
            res.status(500).send(err.toString());
