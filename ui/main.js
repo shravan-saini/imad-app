@@ -51,10 +51,15 @@ submit.onclick = function() {
           }
       }
   };
-  request.open('GET','http://shravansaini94.imad.hasura-app.io/counter',true);
+  
+  //capture the name from input area
+  var inputarea = document.getElementById('inputarea');
+  var name = inputarea.value;
+  
+  //Make a request to server
+  request.open('GET','http://shravansaini94.imad.hasura-app.io/submit-name?inputarea='+name,true);
   request.send(null);
 };
-
 console.log('Loaded!');  
  
  
