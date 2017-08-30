@@ -90,7 +90,8 @@ app.get('/testdb',function(req,res){
        }
        else
         {
-            res.send(JSON.stringify(result));
+            var resultData = result.rows[0];
+                res.send(createTemplate(resultData));
         }
    });
   
