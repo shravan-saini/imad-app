@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 var config = {
     user :'shravansaini94',
     database:'shravansaini94',
-    host :'http://db.imad.hasura-app.io',
+    host :http.get('http://db.imad.hasura-app.io', callback),
     port  :'5432',
     password:'db-shravansaini94-99413'
     
