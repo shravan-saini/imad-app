@@ -57,7 +57,7 @@ function createTemplate(data)
 //creating a pool connection
 var pool = new Pool(config);
 
-app.get('/:articleName',function(res,req){
+app.get('/article-one',function(res,req){
   
    pool.query("SELECT * FROM articles WHERE title='articleOne'",function(err,result){
        if(err)
