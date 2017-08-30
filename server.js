@@ -81,7 +81,7 @@ app.get('/arti',function(res,req){
    }) ;
 });
 
-app.get('/test-db',function(req,res){
+app.get('/articles/test-db',function(req,res){
    
    pool.query("SELECT * FROM articles WHERE title='article-one'",function(err,result){
        if(err)
