@@ -13,8 +13,72 @@ var config = {
     
 };
 
+function createTemplate(data)
+{
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
+    var htmlTemplate = `
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" content="width=device-width,initial-scale" />
+            <link rel="stylesheet" type="text/css" href="/ui/style.css" />
+            
+        </head>
+    
+        <body>
+            <div class ="container">
+                <div>
+                    <a href="/" >Home</a>
+                </div>
+                <hr/>
+                <h3>
+                    ${heading}
+                </h3>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>`
+
+    return htmlTemplate;
+}
+
+
 //creating a pool connection
 var pool = new Pool(config);
+
+app.get('/articles/:articleName',function(res,req){
+   pool.query("SELECT * FROM articles WHERE title='"+req.param.articleName+"'",function(err,result){
+       if(err)
+       {
+           res.status(500).send(err.toString());
+           
+       }
+       else
+       {
+            if(result.rows.length===0)
+            {
+                res.status(404).send("Article not found");
+            }
+            else
+            {
+                res.send(createTemplate(result.rows[0]));
+            }
+       }
+       
+   }) ;
+});
+
 app.get('/testdb',function(req,res){
    
    pool.query('SELECT * FROM test',function(err,result){
