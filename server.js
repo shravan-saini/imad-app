@@ -57,7 +57,7 @@ function createTemplate(data)
 //creating a pool connection
 var pool = new Pool(config);
 
-app.get('/article-one',function(res,req){
+app.get('/arti',function(res,req){
   
    pool.query("SELECT * FROM articles WHERE title='articleOne'",function(err,result){
        if(err)
@@ -81,7 +81,7 @@ app.get('/article-one',function(res,req){
    }) ;
 });
 
-app.get('/testdb',function(req,res){
+app.get('/test-db',function(req,res){
    
    pool.query("SELECT * FROM articles WHERE title='article-one'",function(err,result){
        if(err)
