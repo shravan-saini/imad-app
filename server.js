@@ -58,7 +58,7 @@ function createTemplate(data)
 var pool = new Pool(config);
 
 app.get('/articles/:articleName',function(res,req){
-    var articleName=req.params.articleName;
+  
    pool.query("SELECT * FROM articles WHERE title='"+article-one+"'",function(err,result){
        if(err)
        {
