@@ -73,7 +73,8 @@ app.get('/article-one',function(res,req){
             }
             else
             {
-                res.send(createTemplate(result.rows[0]));
+                var resultData = result.rows[0];
+                res.send(createTemplate(resultData));
             }
        }
        
