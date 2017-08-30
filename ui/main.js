@@ -1,8 +1,5 @@
 
 // code for counter endpoint
-console.log('Loaded!');
-
-
 
 var button = document.getElementById('counter');
 button.onclick = function() {
@@ -27,6 +24,37 @@ button.onclick = function() {
     request.open('GET','http://shravansaini94.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+//code for name List
+
+var submit = document.getElementById('submit_btn');
+submit.onclick = function() {
+  // crate an request to server
+  var request = new XMLHttpRequest();
   
+  // capture the response in a variable
+  request.onreadystatechange = function()   {
+      if(request.readyState === XMLHttpRequest.DONE)
+      {
+          if(request.status===200)
+          {
+              var names = request.responseText;
+              names = JSON.parse(names);
+              var list='';
+              for(var i=0;i<names.length;i++)
+              {
+                  list+= '<li>'+names[i]+'</li>';
+              }
+              var ul = document.getElementById('namelist');
+              ul.innerHTML = list;
+              
+          }
+      }
+  };
+  request.open('GET','http://shravansaini94.imad.hasura-app.io/counter',true);
+  request.send(null);
+};
+
+console.log('Loaded!');  
  
  
