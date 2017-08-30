@@ -17,10 +17,10 @@ var config = {
 var pool = new Pool(config);
 app.get('/testdb',function(req,res){
    
-   pool.query('SELECT *FROM test',function(err,result){
+   pool.query('SELECT * FROM test',function(err,result){
        
         {
-            res.send(JSON.stringify("hello"));
+            res.send(JSON.stringify(result));
         }
    });
   
