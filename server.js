@@ -19,7 +19,13 @@ app.get('/', function (req, res) {
 });
 
 
-
+var names = [];
+app.get('/submit-name',function(req,res){
+   //get the names from the input area
+    var name = req.query.inputarea;
+    names.push(name);
+    res.send(JSON.stringify(names));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
