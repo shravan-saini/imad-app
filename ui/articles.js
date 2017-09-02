@@ -13,7 +13,7 @@ request.onreadystatechange = function()   {
           if(articleList.length<5)
               for(var i=0;i<articleList.length;i++)
               {
-                  list+= '<li>'+articleList[i]+'</li>';
+                  list+= '<li>'+articleList[i].rows[1]+'</li>';
               }
             else
               for(var j=0;j<5;j++)
