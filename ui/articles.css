@@ -15,8 +15,9 @@ body {
 #loginBtnAtHome {
     position:absolute;
     right:100px;
-    display:inline;
+
 }
 #logoutBtnAtHome    {
-    
+    position:absolute;
+    right:10;
 }
