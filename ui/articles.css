@@ -4,9 +4,9 @@ body {
     margin-top: 75px;
 }
 
-#header {
+.header {
     border:1px solid black;
 }
-#heading    {
+.heading    {
     margin : 0 auto;
 }
