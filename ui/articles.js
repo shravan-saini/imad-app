@@ -13,12 +13,12 @@ request.onreadystatechange = function()   {
           if(articleList.length<5)
               for(var i=0;i<articleList.length;i++)
               {
-                  list+= '<li>'+names[i]+'</li>';
+                  list+= '<li>'+articleLists[i].title+'</li>';
               }
             else
               for(i=0;i<5;i++)
               {
-                  list+= '<li>'+names[i]+'</li>';
+                  list+= '<li>'+articleLists[i].title+'</li>';
               }
           var ul = document.getElementById('newArticleList');
           ul.innerHTML = list;
