@@ -8,12 +8,12 @@ request.onreadystatechange = function()   {
       if(request.status===200)
       {
           var articleList = request.responseText;
-          articleLists = JSON.parse(articleList);
+          articleList = JSON.parse(articleList);
           var list='';
           if(articleList.length<5)
               for(var i=0;i<articleList.length;i++)
               {
-                  list+= '<li>'+articleLists[i].title+'</li>';
+                  list+= '<li>'+articleList[i].title+'</li>';
               }
             else
               for(i=0;i<5;i++)
