@@ -16,3 +16,7 @@ body {
     right:70px;
     display:inline;
 }
+#logoutBtnAtHome    {
+    position:absolute;
+    right:0;
+}
