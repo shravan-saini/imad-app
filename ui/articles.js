@@ -14,6 +14,7 @@ request.onreadystatechange = function()   {
               for(var i=0;i<articleList.length;i++)
               {
                   var obj=articleList[i];
+                  console.log(articleList[i]);
                   list+= '<li>'+obj.title+'</li>';
               }
             else
