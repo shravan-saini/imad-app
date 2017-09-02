@@ -14,10 +14,10 @@ body {
 
 #loginBtnAtHome {
     position:absolute;
-    right:70px;
+    right:80px;
     display:inline;
 }
 #logoutBtnAtHome    {
     position:absolute;
-    right:0;
+    right:10;
 }
