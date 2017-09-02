@@ -88,7 +88,7 @@ app.get('/articles/:articleName',function(req,res){
 // code to retriev new articles list
 app.get('/GetNewArticles',function(req,res){
    
-   pool.query("SELECT * FROM articles ORDER BY date DESC",function(err,result){
+   pool.query("SELECT title FROM articles ORDER BY date DESC",function(err,result){
        if(err)
        {
            res.status(509).send(err.toString());
