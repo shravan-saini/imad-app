@@ -10,3 +10,8 @@ body {
 .heading    {
     margin : 0 auto;
 }
+
+#loginBtnAtHome {
+    margin-right:50px;
+    display:block;
+}
