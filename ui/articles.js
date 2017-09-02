@@ -10,7 +10,7 @@ request.onreadystatechange = function()   {
           var articleList = request.responseText;
           articleList = JSON.parse(articleList);
           var list='';
-          console.log('h2');
+          console.log(articleList);
           if(articleList.length<5)
               for(var i=0;i<articleList.length;i++)
               {
