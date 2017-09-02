@@ -3,3 +3,10 @@ body {
     background-color: lightgrey;
     margin-top: 75px;
 }
+
+#header {
+    border:1px solid black;
+}
+#heading    {
+    margin : 0 auto;
+}
