@@ -10,6 +10,7 @@ body {
 }
 .heading    {
     margin : 20 auto;
+    text-align:center;
 }
 
 #loginBtnAtHome {
