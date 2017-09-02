@@ -14,13 +14,13 @@ request.onreadystatechange = function()   {
               for(var i=0;i<articleList.length;i++)
               {
                   var obj=articleList[i];
-                  list+= '<li>'+$(obj.title)+'</li>';
+                  list+= '<li>'+obj.title+'</li>';
               }
             else
               for(var j=0;j<5;j++)
               {
                   var obj2=articleList[j];
-                  list+= '<li>'+$(obj2.title)+'</li>';
+                  list+= '<li>'+obj2.title+'</li>';
               }
           var ul = document.getElementById('newArticleList');
           ul.innerHTML = list;
