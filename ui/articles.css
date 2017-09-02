@@ -12,11 +12,11 @@ body {
 }
 
 #loginBtnAtHome {
-    position:absolute;
+    position:relative;
     right:70px;
     display:inline;
 }
 #logoutBtnAtHome    {
-    position:absolute;
+    position:relative;
     right:0;
 }
