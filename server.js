@@ -52,7 +52,10 @@ function createTemplate(data)
 
     return htmlTemplate;
 }
-
+//link for articles main page
+app.get('/articles', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'articles.html'));
+});
 
 //creating a pool connection
 var pool = new Pool(config);
