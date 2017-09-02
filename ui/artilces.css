@@ -1,3 +1,8 @@
+body    {
+    font-family: sans-serif;
+    background-color: lightgrey;
+}
+
 .header {
     border:3px solid black;
 }
