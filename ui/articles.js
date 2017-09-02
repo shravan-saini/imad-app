@@ -18,7 +18,7 @@ request.onreadystatechange = function()   {
             else
               for(var j=0;j<5;j++)
               {
-                  list+= '<li>'+articleList[j].title+'</li>';
+                  list+= '<li>'+articleList[j].rows[1]+'</li>';
               }
           var ul = document.getElementById('newArticleList');
           ul.innerHTML = list;
